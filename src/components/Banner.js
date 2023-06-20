@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 //image
 import Image from '../assets/Logo.png'
 //icon

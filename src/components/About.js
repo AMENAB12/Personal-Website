@@ -32,7 +32,7 @@ const [ref, inView] = useInView({
       viewport={{once: false, amount: 0.3}}
       className='Flex-1'>
         <h2 className='h2 text-accent'>About me.</h2>
-        <h3 className='h3 mb-4'>I am A freelance Front end developer with Junior </h3>
+        <h3 className='h3 mb-4'>I am A Full Stack Web Developer | React | Node | Software Engineering Student @ ALX | </h3>
         <p className='mb-6'>
         From the moment I Write "Hello World" in the console of my first application, I knew I was hooked into the world of software development. Since then, I can't get enough and I have been obsessed with the idea of using software to solve practical problems.
 

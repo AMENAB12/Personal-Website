@@ -24,7 +24,7 @@ const Header = () => {
         <img className='w-1/2 h-1/2' src={logo} alt="" />
       </Link>
       {/*button */}
-      <a href="https://drive.google.com/file/d/1vMSGzbhBKAxrtk3L5hGl6M5St-qR6XPZ/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button className='btn btn-sm'>Resume</button></a>
+      <a href="https://drive.google.com/file/d/1D33sjMSIRpZ29LrtOp42RdWRo28de_Mx/view?usp=sharing" target="_blank" rel="noopener noreferrer"><button className='btn btn-sm'>Resume</button></a>
     </div>
   </div>
 
