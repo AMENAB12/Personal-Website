@@ -45,9 +45,9 @@ const Contact = () => {
   whileInView={"show"}
   viewport={{once: false, amount: 0.4}}
   className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
-    <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Your email' name="to_name" />
-    <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all mb-10' type="text" placeholder='Your name' name='from_name'/>
-   <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='Your message' name="message"></textarea>
+    <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='email' name="to_name" />
+    <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all mb-10' type="text" placeholder='name' name='from_name'/>
+   <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='message' name="message"></textarea>
    <button type='submit' value='send' onClick={()=>gaEventTracker('email')} className='btn btn-lg'>Send Message </button>
   <motion.div 
            variants={fadeIn('down', 0.9)} 
