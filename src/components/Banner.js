@@ -37,7 +37,7 @@ const Banner = () => {
           <TypeAnimation 
           sequence={[
             'Full Stack Web Developer', 2000,
-            'You Tuber', 2000,
+
           ]}speed={70}
           className='text-accent'
           wrapper='span'
