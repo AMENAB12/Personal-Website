@@ -8,7 +8,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
-const TRACKING_ID = "G-BB5S6SWCH5"; // OUR_TRACKING_ID
+const TRACKING_ID = "G-VKFNZGD4M9"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
 const App = () => {
   return (
