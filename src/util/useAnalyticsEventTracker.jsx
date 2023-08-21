@@ -2,7 +2,7 @@ import React from "react";
 import ReactGA from "react-ga";
 
 
-const useAnalyticsEventTracker = (category="Send Message") => {
+const useAnalyticsEventTracker = (category="User") => {
   const eventTracker = (action, label ) => {
     ReactGA.event({category, action, label});
   }
