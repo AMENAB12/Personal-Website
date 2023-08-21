@@ -1,6 +1,7 @@
 import React from 'react';
 //motion
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+import useAnalyticsEventTracker from "../util/useAnalyticsEventTracker.jsx"
 //variant
 import {fadeIn} from '../variants'
 import { FaEnvelope, FaGithub, FaYoutube } from 'react-icons/fa';
@@ -9,6 +10,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const gaEventTracker = useAnalyticsEventTracker('Send Message');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -46,7 +48,7 @@ const Contact = () => {
     <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='Your email' name="to_name" />
     <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all mb-10' type="text" placeholder='Your name' name='from_name'/>
    <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='Your message' name="message"></textarea>
-   <button type='submit' value='send' className='btn btn-lg'>Send Message </button>
+   <button type='submit' value='send' onClick={()=>gaEventTracker('email')} className='btn btn-lg'>Send Message </button>
   <motion.div 
            variants={fadeIn('down', 0.9)} 
            initial="hidden" 
