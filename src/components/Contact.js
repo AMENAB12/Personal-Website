@@ -10,8 +10,10 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
-  const gaEventTracker = useAnalyticsEventTracker('Send Message');
-
+  const eventTracker = useAnalyticsEventTracker();
+const handleSendMessage = ()=>{
+  eventTracker("click", "Send Message Button");
+}
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -48,7 +50,7 @@ const Contact = () => {
     <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all' type="text" placeholder='email' name="to_name" />
     <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all mb-10' type="text" placeholder='name' name='from_name'/>
    <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='message' name="message"></textarea>
-   <button type='submit' value='send' onClick={()=>gaEventTracker('email')} className='btn btn-lg'>Send Message </button>
+   <button type='submit' value='send' onClick={handleSendMessage} className='btn btn-lg'>Send Message </button>
   <motion.div 
            variants={fadeIn('down', 0.9)} 
            initial="hidden" 
